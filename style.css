@@ -1,0 +1,166 @@
+/* Global Styles */
+
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-image: url('pexels-juanpphotoandvideo-877971.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #337ab7;
+  margin-bottom: 10px;
+}
+
+/* Anchor styles */
+a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+a:hover {
+  color: #23527c;
+}
+
+/* Container styles */
+.container {
+  max-width: 1300px;
+  max-height: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f1ead4;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms styles */
+form {
+  margin-bottom: 0px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #23527c;
+}
+
+/* Tables styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+/* Alerts styles */
+.alert {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+/* Buttons styles */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #23527c;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+
+/* Admin Dashboard styles */
+.admin-dashboard {
+  padding: 20px;
+}
+
+.admin-dashboard h2 {
+  margin-top: 0;
+}
+
+.admin-issued-books {
+  margin-bottom: 20px;
+}
+
+.admin-issued-books th, .admin-issued-books td {
+  text-align: center;
+}
+
+.admin-issued-books .btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+}

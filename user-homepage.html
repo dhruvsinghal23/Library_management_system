@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <title>User Homepage</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Welcome, [User Name]</h1>
+        <hr />
+
+        <!-- Book Search Section -->
+        <h2>Search Books</h2>
+        <a href="book-search.html" class="btn btn-primary">Search Books</a>
+
+        <!-- Add Book Section -->
+        <h2>Add a Book</h2>
+        <form id="addBookForm">
+            <div class="form-group">
+                <label for="bookName">Book Name</label>
+                <input type="text" class="form-control" id="bookName" required />
+            </div>
+            <div class="form-group">
+                <label for="bookAuthor">Author</label>
+                <input type="text" class="form-control" id="bookAuthor" required />
+            </div>
+            <div class="form-group">
+                <label for="bookGenre">Genre</label>
+                <input type="text" class="form-control" id="bookGenre" required />
+            </div>
+            <button type="submit" class="btn btn-success">Add Book</button>
+        </form>
+        <div id="addBookAlert"></div>
+    </div>
+
+    <script>
+      // Add Book Form Submission
+      document.getElementById("addBookForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const bookName = document.getElementById("bookName").value;
+          const bookAuthor = document.getElementById("bookAuthor").value;
+          const bookGenre = document.getElementById("bookGenre").value;
+
+          let books = JSON.parse(localStorage.getItem("books")) || [];
+          
+          // Add the new book
+          books.push({ name: bookName, author: bookAuthor, genre: bookGenre });
+          localStorage.setItem("books", JSON.stringify(books));
+
+          document.getElementById("addBookAlert").innerHTML = `
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              Book added successfully!
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          `;
+      });
+    </script>
+</body>
+</html>
